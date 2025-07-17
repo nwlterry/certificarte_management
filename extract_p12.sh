@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Usage: ./extract_p12.sh certificate.p12
+
 # Check if OpenSSL is installed
 if ! command -v openssl &> /dev/null; then
     echo "Error: OpenSSL is not installed. Please install it first."
