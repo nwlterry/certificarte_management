@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Usage: ./convert_pfx_to_p12.sh input.pfx keystore.p12 truststore.p12
+
 # Function to check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
