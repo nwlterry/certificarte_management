@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Usage: ./verify_stores.sh keystore.p12 truststore.p12
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <keystore_file> <truststore_file>"
     exit 1
