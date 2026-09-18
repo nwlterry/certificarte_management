@@ -1,24 +1,30 @@
 # certificarte_management
 
-OpenSSL/keytool helpers for converting Windows PFX certificates into Java PKCS12 keystore and truststore files.
+OpenSSL/keytool helpers to convert a Windows PFX into a Java PKCS12 keystore and a cert-only truststore.
 
 (The repository name is spelled `certificarte_management`.)
 
-## Scripts
+## Layout
 
-| File | Purpose |
-| --- | --- |
-| `convert_pfx_to_p12.sh` | Extract key + cert from a PFX, then create a PKCS12 keystore and a cert-only truststore. |
-| `extract_p12.sh` | Extract material from a P12. |
-| `extract_pfx.sh` | Extract material from a PFX. |
-| `verify_stores.sh` | Verify generated stores. |
+```
+scripts/convert_pfx_to_p12.sh
+scripts/extract_p12.sh
+scripts/extract_pfx.sh
+scripts/verify_stores.sh
+GROUP.md
+README.md
+```
 
 ## convert_pfx_to_p12.sh
 
 Requires `openssl` and Java `keytool`.
 
 ```bash
-bash convert_pfx_to_p12.sh certificate.pfx mykeystore.p12 mytruststore.p12
+bash scripts/convert_pfx_to_p12.sh certificate.pfx mykeystore.p12 mytruststore.p12
 ```
 
-Prompts for the PFX password and the new keystore/truststore passwords. Temp PEMs are cleaned up on exit.
+Prompts for the PFX password and the new keystore/truststore passwords.
+
+---
+
+See [GROUP.md](GROUP.md) for sibling repositories. Catalog: https://github.com/nwlterry/nwlterry
